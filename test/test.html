@@ -6,8 +6,18 @@
 	<title>Document</title>
 </head>
 <script>
+	function isNaturalNumber(n)
+ 	{
+        n = n.toString(); 
+        var n1 = Math.abs(n),
+            n2 = parseInt(n, 10);
+        return !isNaN(n1) && n2 === n1 && n1.toString() === n;
+    }
 	var n;
     n = prompt("Nhap n : ");
+    while(!isNaturalNumber(n)){
+    n = prompt("Nhap lai n :");
+	}
 	for(var i=1;i<=n;i++){
 		for(var j=1;j<=n;j++){
 			if(i==1 || j==1 || i==n || j==n){
